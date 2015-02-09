@@ -1,10 +1,10 @@
 {
-  "name": "flapper-news",
+  "name": "marked",
   "version": "0.0.0",
   "authors": [
     "Victor Almeida <viktorsnt@gmail.com>"
   ],
-  "license": "MIT",
+  "license": "",
   "private": true,
   "ignore": [
     "**/.*",
