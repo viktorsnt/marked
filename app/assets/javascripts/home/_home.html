@@ -1,0 +1,43 @@
+<aside class="col-md-3">
+
+	<form ng-submit="addPost()">
+    <h3>Add a new post</h3>
+
+    <div class="form-group">
+      <input type="text"
+        class="form-control"
+        placeholder="Title"
+        ng-model="title"></input>
+    </div>
+    <div class="form-group">
+      <input type="text"
+      class="form-control"
+      placeholder="Link"
+      ng-model="link"></input>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Post</button>
+  </form>
+
+</aside>
+
+<section class="col-md-9">
+
+	<article class="col-md-12" ng-repeat="post in posts | orderBy: '-upvotes'">
+		<div>
+			<span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvote(post)"></span>
+			<a ng-show="post.link" href="{{post.link}}">
+				{{post.title}}
+			</a>
+			<span ng-hide="post.link">
+				{{post.title}}
+			</span>
+			<br>
+			<small class="text-muted">upvotes: {{post.upvotes}}</small>
+      <br>
+      <span>
+        <a href="#/posts/{{post.id}}">Comments</a>
+      </span>
+		</div>
+	</article>
+
+</section>

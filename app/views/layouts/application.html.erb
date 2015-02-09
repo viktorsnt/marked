@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FlapperNews</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <style>.glyphicon-thumbs-up{cursor: pointer;}article{margin-bottom: 10px;}</style>
+</head>
+<body ng-app="flapperNews" ng-controller="MainCtrl">
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="container">
+		      
+		      <div class="page-header">
+		        <a href='#/'><h1>Flapper News</h1></a>
+		      </div>
+
+	    	</div>
+	    </div>
+
+			<div class="row">
+				<div class="container">
+
+					<ui-view></ui-view>
+
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
