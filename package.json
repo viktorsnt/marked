@@ -7,9 +7,24 @@
   },
   "engines": {
     "node": "0.10.x",
-    "npm": "1.3.x"
+    "npm": "2.1.x"
   },
   "scripts": {
     "postinstall": "bower install"
-  }
+  },
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viktorsnt/marked.git"
+  },
+  "author": "Victor Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktorsnt/marked/issues"
+  },
+  "homepage": "https://github.com/viktorsnt/marked"
 }
