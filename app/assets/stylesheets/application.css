@@ -2,3 +2,5 @@
  *= require bootstrap/dist/css/bootstrap
  *= require_tree .
  */
+
+.navbar { border-radius: 0; }
