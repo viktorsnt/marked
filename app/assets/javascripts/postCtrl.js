@@ -1,9 +1,13 @@
-app.controller('PostCtrl', ['$scope', 'posts', 'post', function($scope, posts, post) {
+app.controller('PostCtrl', ['$scope', 'posts', 'post', 'Auth', function($scope, posts, post, Auth) {
+  
+  $scope.signedIn = Auth.isAuthenticated;
 
   $scope.post = post;
 
   $scope.incrementUpvotes = function(comment) {
-    posts.upvoteComment($scope.post, comment);
+    if ($scope.signedIn()) {
+      posts.upvoteComment($scope.post, comment);
+    }
   };
   
   $scope.addComment = function() {
