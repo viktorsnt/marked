@@ -33,3 +33,5 @@ gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
 
 gem 'devise', '~> 3.4.0'
+
+gem 'nokogiri'
