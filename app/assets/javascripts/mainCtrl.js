@@ -3,14 +3,12 @@ app.controller('MainCtrl', ['$scope', 'posts', 'Auth', function($scope, posts, A
   $scope.posts = posts.posts;
 
   $scope.addPost = function() {
-    if (!$scope.title || $scope.title === '') {
+    if (!$scope.link || $scope.link === '') {
       return;
     }
     posts.create({
-      title: $scope.title,
       link: $scope.link
     });
-    $scope.title = '';
     $scope.link = '';
   };
 
