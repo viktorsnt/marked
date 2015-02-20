@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    respond_with Post.create(post_params)
+    respond_with Post.create(post_params.merge(user_id: current_user.id))
   end
 
   def show
@@ -19,7 +19,9 @@ class PostsController < ApplicationController
   end
 
   private
-	def post_params
+	
+  def post_params
     params.require(:post).permit(:link, :title)
   end
+
 end

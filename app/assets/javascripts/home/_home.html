@@ -27,6 +27,8 @@
         <br>
         <small class="text-muted">upvotes: {{post.upvotes}}</small>
         <br>
+        posted by <a ng-href="#/users/{{post.user.username}}">{{post.user.username}}</a>
+        <br>
         <span>
         <a href="#/posts/{{post.id}}">Comments</a>
       </span>
