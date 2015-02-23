@@ -15,8 +15,8 @@ app.controller('PostCtrl', ['$scope', 'posts', 'post', 'Auth', function($scope, 
       return;
     }
     posts.addComment(post.id, {
-      body: $scope.body,
-      author: 'user'
+      body: $scope.body
+      // author: 'user'
     }).success( function(comment) {
       $scope.post.comments.push(comment);
       $scope.body = '';
