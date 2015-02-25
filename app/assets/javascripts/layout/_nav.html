@@ -1,9 +1,18 @@
-<div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl">
-  <ul class="nav navbar-nav">
-    <li><a href="#/home">Home</a></li>
-    <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-    <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
-    <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
-    <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
-  </ul>
+<div class="container">
+	<div class="col-sm-12 col-md-8 col-md-offset-2">
+		<div class="wrapper">
+			<nav class="" role="navigation" ng-controller="NavCtrl">
+			  <ul class="">
+			    <li class="logo"><a href="#/home">MARKED</a></li>
+			    <li><a href="#/">ABOUT</a></li>
+			  </ul>
+			  <ul class="pull-right">
+			    <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
+			    <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
+			    <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
+			    <li ng-show="signedIn()"><a href="#" ng-click="logout()">Logout</a></li>
+			  </ul>
+			</nav>
+		</div>
+	</div>
 </div>

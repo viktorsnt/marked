@@ -3,22 +3,119 @@
  *= require_tree .
  */
 
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+ body {
+ 	font-family: 'Lato', sans-serif;
+ 	/*border-top: 5px solid #333;*/
+ } 
+
+footer { margin-top: 60px; float:right; }
+
+.wrapper {
+	width: 700px;
+	position: relative;
+	float: left
+}
+
+nav[role="navigation"] {
+	width: 100%;
+	border-bottom: 1px solid #808080;
+	position: relative;
+	float: left;
+	height: 60px;
+	padding-top: 16px;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+nav[role="navigation"] li {
+	float: left;
+	font-size: 14px;
+	list-style: none;
+	padding-top: 4px;
+}
+nav[role="navigation"] li:last-child {
+	border-right: none;
+}
+nav[role="navigation"] li a {
+	float: left;
+	padding: 0 10px;
+	text-decoration: none;
+	color: #808080;
+	border-radius: 4px;
+}
+nav[role="navigation"] li a:hover,
+nav[role="navigation"] li a:focus {
+	color: #333;
+}
+nav[role="navigation"] li a:active {
+	color: #666;
+}
+nav[role="navigation"] li.active a {
+	font-weight: bold;
+	color: #333;
+}
+
+nav[role="navigation"] .logo {
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+	color: #59656B;
+	letter-spacing: 8px;
+	line-height: 29px;
+	padding-top: 0;
+}
+
 .navbar { border-radius: 0; }
 
-hr { border-top: 1px solid #979797; }
+hr { border-top: 1px solid #DCDCDC; }
 
 .glyphicon-thumbs-up {
 	cursor: pointer;
 	font-size: 20px;
-	margin-top: 39%;
+	float: left;
+	width: 100%;
+	margin: 0 auto;
 }
 section {
-	margin-top: 10px;
+	margin-top: 60px;
+	padding: 0 !important;
 }
 article {
+	width: 100%;
+	display: block;
+	position: relative;
+	float: left;
 	padding: 20px 0;
-	border-top: 1px solid #979797;
+	border-top: 1px solid #DCDCDC;
 }
 article:last-child {
-	border-bottom: 1px solid #979797;
+	border-bottom: 1px solid #DCDCDC;
+}
+
+.form-group {
+	width: 530px;
+	margin-right: 20px;
+}
+.form-control {
+	width: 100% !important;
+	border-color: #505050;
+	border-radius: 0;
+	height: 40px;
+}
+.btn-black {
+	width: 150px;
+	height: 40px;
+	border-radius: 0;
+	color: #505050;
+	background-color: #fff;
+	border-color: #505050;
+	-webkit-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+.btn-black:hover {
+	color: #fff !important;
+	background-color: #505050;
+	border-color: #505050;
 }
