@@ -8,22 +8,20 @@
 </head>
 <body ng-app="flapperNews" ng-controller="MainCtrl">
 
-		<div class="container-fluid">
 		
-			<div ng-include="'layout/_nav.html'"></div>
+		<header ng-include="'layout/_nav.html'"></header>
 
-			<div class="row">
-				<div class="container">
+		<div class="container">
 
-					<ui-view></ui-view>
+			<ui-view></ui-view>
 
-				</div>
-			</div>
+		</div>
+
+		<div class="container">
 
 			<footer>
-				<p>
-					<small>created from the tutorial: <a href="https://thinkster.io/angular-rails/">https://thinkster.io/angular-rails/</a></small>
-				</p>
+				<small class="text-muted">created by <a href="http://dev.almeidavictor.com.br/">victor almeida</a></small>
+				<small class="text-muted pull-right"><a href="https://thinkster.io/angular-rails/">https://thinkster.io/angular-rails/</a></small>
 			</footer>
 
 		</div>
