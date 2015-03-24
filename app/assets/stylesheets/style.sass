@@ -1,0 +1,170 @@
+$light-gray: #EFEFEF
+$gray: #999999
+$dark-gray: #707070
+$blue: #7B9BCC
+$dark-blue: #5F79A2
+
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css)
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
+
+html
+  font-family: 'Lato', sans-serif
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+section,
+header,
+footer
+  margin-top: 3em
+
+footer
+  padding-top: 2em
+  border-top: 1px solid $light-gray
+
+a
+  color: #3C607E
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: #2B455C
+    text-decoration: none
+
+h1
+  font-family: Helvetica, 'Lato', sans-serif
+  float: left
+  font-size: 24px
+  font-size: 1.5em
+  font-weight: 400
+  letter-spacing: 2px
+
+h2
+  font-size: 18px
+  font-size: 1.15em
+  font-weight: 400
+  line-height: 1.4
+  margin: 0.6em 0
+
+input,
+button
+  width: 100%
+  height: 2em
+  margin-bottom: 1em
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+  padding-left: 0.5em
+  background-color: transparent
+  border: 1px solid $gray
+  font-size: 1em
+
+.btn
+  height: 2.2em
+  color: #fff
+  background-color: $blue
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  outline: 0
+  border: 0
+  &:hover,
+  &:focus
+    background-color: $dark-blue
+  
+nav[role="navigation"] ul li
+  float: left
+  list-style: none
+  margin-left: 10px
+  a
+    color: $gray
+    &:hover,
+    &:focus
+      color: $dark-gray
+
+article
+  margin-bottom: 2em
+  padding-bottom: 2em
+  border-bottom: 1px solid $light-gray
+
+.container
+  padding-left: 0.5em
+  padding-right: 0.5em
+  display: block
+  margin: 0 auto
+  max-width: 700px
+
+article
+  display: flex
+  flex-direction: row
+  .col-2
+    flex: 1
+  .col-10
+    flex: 5
+
+.col-2
+  position: relative
+
+.pull-right
+  float: right
+
+.hide-sm
+  display: none
+
+.text-muted
+  color: $gray
+  a
+    color: $gray
+    &:hover,
+    &focus
+      color: $dark-gray
+ 
+.fa
+  font-size: 1.6em
+  margin-bottom: 0.2em
+  cursor: pointer
+
+.centering
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+
+@media only screen and (min-width: 480px)
+  .hide-sm
+    display: inline-block
+  form
+    width: 100%
+  .form-inline
+    display: flex
+    flex-direction: row
+    input
+      flex: 4
+      margin-right: 0.8em
+    button
+      flex: 1
+
+
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+.cf:before,
+.cf:after
+  content: " " // 1
+  display: table // 2
+
+.cf:after
+  clear: both
+
+//
+// For IE 6/7 only
+// Include this rule to trigger hasLayout and contain floats.
+//
+.cf
+  *zoom: 1
